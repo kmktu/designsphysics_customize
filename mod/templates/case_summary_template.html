@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DesignSPHysics Case Summary Template</title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<h3>General details</h3>
+	<div />
+	<b>Case Name</b>: {name}<br />
+	<b>Project Path</b>: {path}<br />
+	<b>Project Mode</b>: {_mode3d}<br />
+	<b>Particle distance</b>: {dp} meters<br />
+	<b>Used MKFluid</b>: {_mkfluidused}<br />
+	<b>Used MKBound</b>: {_mkboundused}<br />
+
+	<h3>DualSPHysics suite paths</h3>
+	<div />
+	<b>GenCase</b>: {executable_paths[gencase]}<br />
+	<b>DualSPHysics</b>: {executable_paths[dsphysics]}<br />
+	<b>PartVTK</b>: {executable_paths[partvtk]}<br />
+	<b>FloatingInfo</b>: {executable_paths[floatinginfo]}<br />
+	<b>ComputeForces</b>: {executable_paths[computeforces]}<br />
+	<b>MeasureTool</b>: {executable_paths[measuretool]}<br />
+	<b>MeasureTool</b>: {executable_paths[isosurface]}<br />
+	<b>FlowTool</b>: {executable_paths[boundaryvtk]}<br />
+	<b>FlowTool</b>: {executable_paths[flowtool]}<br />
+	<b>ParaView</b>: {executable_paths[paraview]}<br />
+
+	<h3>Objects information</h3>
+	<div />
+	{_objects_info}
+
+	<h3>Case defined movements</h3>
+	<div />
+	{_movement_info}
+
+	<h3>Case Constants</h3>
+	<div />
+	<b>Lattice setting:</b> {constants[lattice_bound]} for bound, {constants[lattice_fluid]} for fluid<br />
+	<b>Gravity vector:</b> {_gravity} m/s<sup>2</sup><br />
+	<b>Reference density for fluids:</b> {constants[rhop0]} kg/m<sup>3</sup><br />
+	<b>Maximum still water level to calculate speedofsound using coefsound:</b> {_hswl}<br />
+	<b>Gamma:</b> {constants[gamma]}<br />
+	<b>Maximum system speed:</b> {_speedsystem}<br />
+	<b>Coefficient to multiply speedsystem:</b> {constants[coefsound]}<br />
+	<b>Speed of sound:</b> {constants[speedsound]} m/s<br />
+	<b>Smoothing length coefficient:</b> {constants[coefh]}<br />
+	<b>Coefficient to multiply dt:</b> {constants[cflnumber]}<br />
+	<b>H Constant:</b> {_h}<br />
+	<b>B Constant:</b> {_b}<br />
+	<b>Mass for boundary particles:</b> {_massbound}<br />
+	<b>Mass for fluid particles:</b> {_massfluid}
+
+	<h3>Execution parameters</h3>
+	<div />
+	<b>Precision in particle interaction:</b> {execution_parameters[posdouble]}<br />
+	<b>Step algorithm:</b> {execution_parameters[stepalgorithm]}<br />
+	<b>Number of steps to apply Euler timestepping (Verlet only):</b> {execution_parameters[verletsteps]}<br />
+	<b>Interaction Kernel:</b> {execution_parameters[kernel]}<br />
+	<b>Viscosity formulation:</b> {execution_parameters[viscotreatment]}<br />
+	<b>Viscosity value:</b> {execution_parameters[visco]}<br />
+	<b>Multiply viscosity value with boundary:</b> {execution_parameters[viscoboundfactor]}<br />
+	<b>DensityDT:</b> {execution_parameters[densitydt_value]}<br />
+	<b>Shifting mode:</b> {execution_parameters[shifting]}<br />
+	<b>Coefficient for shifting computation:</b> {execution_parameters[shiftcoef]}<br />
+	<b>Threshold to detec free surface:</b> {execution_parameters[shifttfs]}<br />
+	<b>Rigid algorithm:</b> {execution_parameters[rigidalgorithm]}<br />
+	<b>Time to freeze the floatings at simulation start:</b> {execution_parameters[ftpause]}<br />
+	<b>Coefficient to calculate minimum time step:</b> {execution_parameters[coefdtmin]}<br />
+	<b>Initial time step:</b> {_dtini}<br />
+	<b>Minimum time step:</b> {_dtmin}<br />
+	<b>Velocity of particles used to calculate DT:</b> {execution_parameters[dtallparticles]}<br />
+	<b>Time of simulation:</b> {execution_parameters[timemax]}<br />
+	<b>Time out data:</b> {execution_parameters[timeout]}<br />
+	<b>Fluid particles allowed to be excluded from domain:</b> {execution_parameters[partsoutmax]} %<br />
+	<b>Minimum rhop valid:</b> {execution_parameters[rhopoutmin]}<br />
+	<b>Maximum rhop valid:</b> {execution_parameters[rhopoutmax]}
+</body>
+
+</html>

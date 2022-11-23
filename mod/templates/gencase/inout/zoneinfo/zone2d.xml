@@ -1,0 +1,3 @@
+                    <zone2d comment="Input zone for 2D simulations">
+{generator_template}
+                    </zone2d>

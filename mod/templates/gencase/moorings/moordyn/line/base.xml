@@ -1,0 +1,11 @@
+                        <line>
+{vessel1_template}
+{vessel2_template}
+{fix_template}
+                            <length value="{length}" comment="(m)"/>
+                            <segments value="{segments}" />
+{ea_template}
+{diameter_template}
+{massDenInAir_template}
+{ba_template}
+                        </line>
